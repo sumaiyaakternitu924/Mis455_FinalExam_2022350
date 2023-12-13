@@ -13,7 +13,7 @@ function connect(){
    
    function display (data){
 
-     var weatherInfo = data.main;
+     var weatherInfo = data.list;
      console.log(weatherInfo);
    
      var oldContent = document.getElementById("resultscontainer");
@@ -22,10 +22,9 @@ function connect(){
      for (var i=0; i<5; i++){
    
        var newDiv = document.createElement("div");
-       newDiv.innerHTML = `Temperature: ${weatherInfo[i].temp}  <br>
-                           Feels Like: ${weatherInfo[i].feels_likel}<br><br>
-                           <img src="${weatherInfo[i].temp_min}"> <br> <br>
-                           <br>
+       newDiv.innerHTML = `Temperature: ${weatherInfo[i].main.temp}  <br>
+                           Feels Like: ${weatherInfo[i].main.feels_like}<br><br>
+                           Min Temperature: $ ${weatherInfo[i].main.temp_min}<br>
                            ` 
      
    

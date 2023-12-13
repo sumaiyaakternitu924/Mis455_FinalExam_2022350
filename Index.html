@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-        <!-----Picture+Navbar part-->
-            <header>
-                <img src="homePageBack.png">
-                <h>OpenWeather</h>
-                <h>HOME PAGE</h>  
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="index.html">Dashboard</a></li>
-                        <li><a href="pageOne.html">Map</a><li>
-                        <li><a href="pageTwo.html">Guide</a></li>   
-                    </ul>
-                </nav>
-    
-            </header> <br> <br>
-            <h2><b>Want to know about today's weather?</b></h2>
 
-        <!-----Content Part----->
-    
-        <div class="Container">
-            
-            <div class="search-container">
-                <input id="searchBox" placeholder="Search here " type="text"> 
-                <button onclick="connect()"> Search</button>
-            </div>
-    
-            <div id='resultscontainer'></div>
+</head>
+
+<body>
+    <!-----Picture+Navbar part-->
+    <header>
+        <img src="homePageBack.png">
+        <h>OpenWeather</h>
+        <h>HOME PAGE</h>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="pageOne.html">Map</a>
+                <li>
+                <li><a href="pageTwo.html">Guide</a></li>
+            </ul>
+        </nav>
+
+    </header> <br> <br>
+    <h2><b>Want to know about today's weather?</b></h2>
+
+    <div="Search">>
+        <input type="text" id="searchBox">
+        <button onclick="connect()">Search</button>
         </div>
-    
+        <div id='resultscontainer'></div>
+
 
 
         <!-----Footer part-->
-        
-           
-        
-    
+
+
+
+
         <script src="script.js"></script>
-    
+
 </body>
+
 </html>

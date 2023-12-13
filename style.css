@@ -56,7 +56,9 @@ h2{
     font-size: 300%;
     color: black;
 }
-
+.weatherStyle{
+    color: red;
+}
 .search-container {
     text-align: center;
     margin-bottom: 20px;
