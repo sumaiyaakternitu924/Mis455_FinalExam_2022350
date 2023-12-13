@@ -48,12 +48,19 @@ h1{
     font-size: 15px;
 }
 h2{
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    bottom: 10px;
-    font-size: 300%;
-    color: black;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+#btn{
+    color: white;
+    background-color: rgb(6, 6, 109);
+    padding: 10px;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+#searchsection{
+    text-align: center;
 }
 
 input {
@@ -61,8 +68,8 @@ input {
     font-size: 30px;
 }
 
-button:hover {
-    background-color: #45a049;
+#btn:hover {
+    background-color: orangered;
 }
 
 #resultscontainer {
