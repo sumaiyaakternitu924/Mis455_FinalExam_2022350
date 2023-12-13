@@ -24,7 +24,7 @@ header img{
 }
 .nav-links li a{
     margin: 0 15px;
-    color: black;
+    color: white;
     font-weight: 1000;
     font-size: 20px;
     
@@ -32,8 +32,6 @@ header img{
 .nav-links li a:hover{
     color: red;
 }
-
-
 h{
     position: absolute;
     margin-left: 20px;
@@ -57,14 +55,8 @@ h2{
     font-size: 300%;
     color: black;
 }
-#searchBox{
-    position: absolute;
-    left:30%;
-}
-#btn{
-    position: absolute;
-    left: 60%;
-    top: 70%;
+#searchSection{
+    margin-left: 450px;
 }
 input {
     padding: 10px;
