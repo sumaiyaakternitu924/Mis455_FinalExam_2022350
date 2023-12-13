@@ -32,9 +32,10 @@ function connect(){
                            Temperature: ${weatherInfo[i].main.temp}°C<br>
                            Feels Like: ${weatherInfo[i].main.feels_like}°C<br>
                            Min Temperature: ${weatherInfo[i].main.temp_min}°C<br>
-                           Max Temperature: $ ${weatherInfo[i].main.temp_max} °C<br>
-                           Humidity: $ ${weatherInfo[i].main.humidity}<br>` 
-     
+                           Max Temperature: ${weatherInfo[i].main.temp_max} °C<br>
+                           Humidity: ${weatherInfo[i].main.humidity}%<br>
+                           Weather: <img src="https://openweathermap.org/img/wn/${weatherInfo[i].weather[0].icon}@2x.png" alt="Weather image">` 
+        
    
         newDiv.classList.add("weatherStyle");
         oldContent.appendChild(newDiv);
