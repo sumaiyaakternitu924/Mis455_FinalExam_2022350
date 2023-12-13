@@ -2,7 +2,7 @@ function connect(){
 
     var searchTerm = document.getElementById("searchBox").value ; 
    
-    var url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchTerm}` ;
+    var url = `https://api.openweathermap.org/data/2.5/forecast?q=${searchTerm}&appid=7a4b54086e73ae11a4546bb1df43ef4d` ;
     console.log (url);
    
     fetch (url)
@@ -12,10 +12,9 @@ function connect(){
    }
    
    function display (data){
-   
-     //console.log (data);
-     var allMeals = data.meals ;
-     console.log(allMeals);
+
+     var weatherInfo = data.main;
+     console.log(weatherInfo);
    
      var oldContent = document.getElementById("resultscontainer");
      oldContent.textContent = ""; 
@@ -23,14 +22,14 @@ function connect(){
      for (var i=0; i<5; i++){
    
        var newDiv = document.createElement("div");
-       newDiv.innerHTML = `Meal Name: ${allMeals[i].strMeal}  <br>
-                           Meal ID: ${allMeals[i].idMeal}<br><br>
-                           <img src="${allMeals[i].strMealThumb}"> <br> <br>
+       newDiv.innerHTML = `Temperature: ${weatherInfo[i].temp}  <br>
+                           Feels Like: ${weatherInfo[i].feels_likel}<br><br>
+                           <img src="${weatherInfo[i].temp_min}"> <br> <br>
                            <br>
                            ` 
      
    
-        newDiv.classList.add("mealStyle");
+        newDiv.classList.add("weatherStyle");
         oldContent.appendChild(newDiv);
      }
    
