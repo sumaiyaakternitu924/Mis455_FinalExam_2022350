@@ -20,12 +20,20 @@ function connect(){
      oldContent.textContent = ""; 
    
      for (var i=0; i<5; i++){
-   
+        
        var newDiv = document.createElement("div");
-       newDiv.innerHTML = `Temperature: ${weatherInfo[i].main.temp}  <br>
-                           Feels Like: ${weatherInfo[i].main.feels_like}<br><br>
-                           Min Temperature: $ ${weatherInfo[i].main.temp_min}<br>
-                           ` 
+
+       var dt_txt= weatherInfo[i].dt_txt;
+        var todayDate= dt_txt.substr(0 , 10);
+        var todayTime= dt_txt.substr(12 , 20);
+
+       newDiv.innerHTML = `Date: ${todayDate}<br>
+                           Time: ${todayTime}<br>
+                           Temperature: ${weatherInfo[i].main.temp}°C<br>
+                           Feels Like: ${weatherInfo[i].main.feels_like}°C<br>
+                           Min Temperature: ${weatherInfo[i].main.temp_min}°C<br>
+                           Max Temperature: $ ${weatherInfo[i].main.temp_max} °C<br>
+                           Humidity: $ ${weatherInfo[i].main.humidity}<br>` 
      
    
         newDiv.classList.add("weatherStyle");
